@@ -1,0 +1,52 @@
+.login{
+    background-color: rgb(27, 177, 14);
+    padding-top: 50px;
+}
+
+.login-box h1{
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 100;
+}
+.home-icon{
+    background-color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.home-icon .fa{
+    font-size: 15pt;
+    color: #aaaaaa;
+    margin-top: 50%;
+    transform: translateY(-50%);
+}
+.input-form{
+    width: 350px;
+    position: relative;
+}
+.input-form div{
+    background-color: #fff;
+    margin-bottom: 10px;
+    line-height: 35px;
+    border-radius: 5px;    
+}
+.input-form .fa{
+    width: 30px;
+}
+.input-form input{
+    width: 310px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 3px 10px;
+}
+.login-box button{
+    width: 350px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+/* dahboard */
