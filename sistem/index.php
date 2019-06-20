@@ -1,3 +1,10 @@
+<?php
+include '../setting/Functions.php';
+$fungsi = new Functions();
+
+$fungsi->not_logged();
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -21,7 +28,7 @@
             <h3>Arranged by : </h3>
             <p>Owen Wattimena (1316144074)</p>
         </div>
-        <a href="../autentikasi/login.html" class="btn btn-danger">Logout</a>
+        <a href="../autentikasi/logout.php" class="btn btn-danger">Logout</a>
     </div>
 
     <!-- Optional JavaScript -->

@@ -1,3 +1,29 @@
+<?php
+include '../setting/Database.php';
+include '../setting/Functions.php';
+
+$database = new Database();
+$fungsi = new Functions();
+$alert = '';
+
+$fungsi->logged();
+
+if (isset($_POST['submit'])) {
+    if ($_POST['submit'] == 'login') {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        if ($database->auth($username, $password)) {
+            $_SESSION['logged'] = true;
+            header('location:../sistem/index.php');
+            exit;
+        } else {
+            $alert = $fungsi->alert("Username atau Passord salah!!!", "alert-danger");
+        }
+    }
+}
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,6 +45,7 @@
 <body class="login">
 
     <div class="container text-center">
+        <?= $alert ?>
         <div class="login-box">
             <h1>
                 Login to access the system
@@ -29,16 +56,16 @@
 
             <form action="" method="post">
                 <div class="input-form mx-auto">
-                    <div>
+
+                    <div class="input">
                         <i class="fa fa-user"></i>|
-                        <input type="text" name="username" placeholder="Enter your Username">
-                    </div>
-                    <div>
+                        <input type="text" name="username" placeholder="Enter your Username" required> </div>
+                    <div class="input">
                         <i class="fa fa-lock"></i>|
-                        <input type="password" name="password" placeholder="Enter your password">
+                        <input type="password" name="password" placeholder="Enter your password" required>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit" name="login">Login</button>
+                <button class="submit btn btn-primary" type="submit" name="submit" value="login">Login</button>
             </form>
         </div>
     </div>

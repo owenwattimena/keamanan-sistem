@@ -26,7 +26,7 @@
     width: 350px;
     position: relative;
 }
-.input-form div{
+.input-form .input{
     background-color: #fff;
     margin-bottom: 10px;
     line-height: 35px;
@@ -43,7 +43,7 @@
     border-bottom-right-radius: 5px;
     padding: 3px 10px;
 }
-.login-box button{
+.login-box .submit{
     width: 350px;
     height: 40px;
     margin-top: 15px;
